@@ -1,3 +1,3 @@
-#**Gradient Descent**
+# **Gradient Descent**
 
-##Motivation
+## Motivation
