@@ -70,7 +70,7 @@ The main difference between gradient descent variants is:
 **How much data is used to compute the gradient at each update step.**
 
 
-### 1 Batch Gradient Descent
+### Batch Gradient Descent
 
 In Batch Gradient Descent, the gradient is computed using the entire dataset.
 
@@ -92,7 +92,7 @@ This means:
 - Requires the entire dataset in memory.
 
 
-### 7.2 Stochastic Gradient Descent (SGD)
+### Stochastic Gradient Descent (SGD)
 
 In Stochastic Gradient Descent, the gradient is computed using only one training example at a time.
 
@@ -120,7 +120,7 @@ For each training example:
 - Very large datasets
 
 
-### 7.3 Mini-Batch Gradient Descent
+### Mini-Batch Gradient Descent
 
 Mini-batch gradient descent is a combination between Batch GD and SGD.
 
@@ -144,6 +144,15 @@ We use a small subset of data.
 - Faster than batch gradient descent.
 - Less noisy than SGD.
 - Most commonly used method in practice.
+
+## Limitations
+- All the variants require choosing a learning rate α. If α is large then loss function will oscillate around minima. If α is small convergence becomes slow.
+
+- If gradient of Loss function is elongated then convergence to minima becomes very slow.
+
+- For non-convex gradients, gradient descent may converge to local minima instead of global minima. There may also be flat regions where value of loss function becomes stationary.
+
+- In case of SGD, parameter updates are approximate ie. parameter values may not converge to single global minima instead it may approximate near it depending on the samples choosen.
 
 
 
